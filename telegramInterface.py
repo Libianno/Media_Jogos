@@ -16,36 +16,43 @@ app = Client(
     bot_token = getenv('TELEGRAM_BOT_TOKEN')
 )
 
+def formataBasquete(lista):
+    return f'{lista[0]} x {lista[1]} \nData: {lista[2]} \nMedia de pontos: {lista[3]} \n'
+
+def formataFutebol(lista):
+    return f'{lista[0]} x {lista[1]} \nData: {lista[2]} \nMedia de Gols: {lista[3]} \n'
 
 async def main():
     user1 = 'Libianno'
     user2 = 'wellingtonloki'
     #user2 = 'pitbulldaCC'
 
-    liga, matches = NBA.main()
-    strMaches = json.dumps(matches, indent=2)
+    liga, jogos = NBA.main()
+    #strJogos = json.dumps(matches, indent=2)
+    strJogos = '\n'.join([formataBasquete(jogo) for jogo in jogos])
 
     await app.start()
     await app.send_message(user1, liga)
-    await app.send_message(user1, strMaches)
+    await app.send_message(user1, strJogos)
     
     await app.send_message(user2, liga)
-    await app.send_message(user2, strMaches)
+    await app.send_message(user2, strJogos)
 
     run = futebol.main()
     try:
         while 1:
 
-            liga, rodada, matches = next(run)
-            strMaches = json.dumps(matches, indent=2)
+            liga, rodada, jogos = next(run)
+            #strJogos = json.dumps(matches, indent=2)
+            strJogos = '\n'.join([formataFutebol(jogo) for jogo in jogos])
 
             await app.send_message(user1, liga)
             await app.send_message(user1, rodada)
-            await app.send_message(user1, strMaches)
+            await app.send_message(user1, strJogos)
 
             await app.send_message(user2, liga)
             await app.send_message(user2, rodada)
-            await app.send_message(user2, strMaches)
+            await app.send_message(user2, strJogos)
 
     except StopIteration:
         pass
