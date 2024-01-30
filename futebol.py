@@ -9,12 +9,8 @@ import tqdm as tqdm
 
 def get_jogos(nav, link_fixtures):
     nav.get(link_fixtures)
-    liga = nav.find_element(By.CLASS_NAME, 'event__title--type').text
+    liga = nav.find_element(By.CLASS_NAME, 'heading__name').text
     rodada = nav.find_element(By.CLASS_NAME, 'event__round').text
-
-    #print(liga)
-    #print(rodada)
-
     matches = nav.find_elements(By.CLASS_NAME, 'event__match')
     matches = matches[0:10]
     matches_list = []
@@ -24,11 +20,6 @@ def get_jogos(nav, link_fixtures):
         date = match.find_element(By.CLASS_NAME, 'event__time').text
 
         matches_list.append([home, away, date])
-        
-    #    print(home)
-    #    print(away)
-    #    print(date)
-    #pp(matches_list)
     return liga, rodada, matches_list
     
 
@@ -41,23 +32,14 @@ def get_table(nav, link_table):
         name = time.find_element(By.CLASS_NAME, 'tableCellParticipant__name').text
         games = time.find_element(By.CLASS_NAME, 'table__cell--value').text
         goals = time.find_element(By.CLASS_NAME, 'table__cell--score').text
+
         goals_pro = goals[0:2]
         goals_re = goals[3:]
-
-
+        
         table_dict[name] = [games, goals_pro, goals_re]
-
-    #    print(name)
-    #    print(games)
-    #    print(goals)
-    #pp(table_dict)
     return table_dict
 
-def calc(nav,link_table, link_fixtures):
-    table = get_table(nav, link_table)
-    liga, rodada, matches = get_jogos(nav, link_fixtures)
-    #print(liga)
-    #print(rodada)
+def calc(nav, table, matches):
     for match in tqdm.tqdm(matches):
         games1 = table[match[0]][0]
         goals_pro1 = table[match[0]][1]
@@ -70,8 +52,7 @@ def calc(nav,link_table, link_fixtures):
         means_of_match = (int(goals_pro1) + int(goals_pro2) + int(goals_re1) + int(goals_re2))/(int(games1) + int(games2)) 
         means_of_match = str(means_of_match)
         match.append(means_of_match[:4])
-    #pp(matches)
-    return liga, rodada, matches
+    return matches
 
 def main():
     chrome_options = Options()
@@ -94,7 +75,9 @@ def main():
     'https://www.flashscore.com/football/spain/laliga/standings/#/COQ6iu30/table/overall']#SPAIN
     ]
     for link in links:
-        yield calc(nav, link[1], link[0])
+        table = get_table(nav, link[1])
+        liga, rodada, matches = get_jogos(nav, link[0])
+        yield liga, rodada, calc(nav, table, matches)
 
 if __name__ == '__main__':
     run = main()
