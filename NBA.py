@@ -2,8 +2,9 @@ from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from prettyprinter import pprint as pp
-
 from tqdm import tqdm
+
+import json
 
 from links import Links
 
@@ -56,6 +57,12 @@ def get_table(nav, link_table):
         #pp(table_dict)
     return table_dict
 
+def create_json(liga, matches, table):
+    data = {'liga': liga,
+            'matches_list' : matches,
+            'table_dict': table}
+    with open('dados_futebol.json', 'w') as dados_futebol:
+        dados_futebol.write(json.dumps(data, indent=2))
 
 def calcula_media_jogos(table, matches):
     #print(liga)
@@ -84,11 +91,13 @@ def main():
     link_table = Links.basquete[1]
     table = get_table(nav, link_table)
     liga, matches = get_jogos(nav, link_fixtures)
-    return liga, calcula_media_jogos(nav,table, matches)
+    create_json(liga, matches, table)
+    #return liga, calcula_media_jogos(nav,table, matches)
     
 
 
 if __name__ == '__main__':
-    liga, matches = main()
-    print(liga)
-    pp(matches)
+    main()
+    #liga, matches = main()
+    #print(liga)
+    #pp(matches)

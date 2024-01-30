@@ -1,0 +1,382 @@
+{
+  "liga": "NBA",
+  "matches_list": [
+    [
+      "Atlanta Hawks",
+      "Los Angeles Lakers",
+      "30.01. 21:30"
+    ],
+    [
+      "Boston Celtics",
+      "Indiana Pacers",
+      "30.01. 21:30"
+    ],
+    [
+      "New York Knicks",
+      "Utah Jazz",
+      "30.01. 21:30"
+    ],
+    [
+      "Chicago Bulls",
+      "Toronto Raptors",
+      "30.01. 22:00"
+    ],
+    [
+      "Golden State Warriors",
+      "Philadelphia 76ers",
+      "31.01. 00:00"
+    ],
+    [
+      "Charlotte Hornets",
+      "Chicago Bulls",
+      "31.01. 21:00"
+    ],
+    [
+      "Cleveland Cavaliers",
+      "Detroit Pistons",
+      "31.01. 21:00"
+    ],
+    [
+      "Washington Wizards",
+      "Los Angeles Clippers",
+      "31.01. 21:00"
+    ],
+    [
+      "Miami Heat",
+      "Sacramento Kings",
+      "31.01. 21:30"
+    ],
+    [
+      "Houston Rockets",
+      "New Orleans Pelicans",
+      "31.01. 22:00"
+    ],
+    [
+      "Minnesota Timberwolves",
+      "Dallas Mavericks",
+      "31.01. 22:00"
+    ],
+    [
+      "Oklahoma City Thunder",
+      "Denver Nuggets",
+      "31.01. 22:00"
+    ],
+    [
+      "San Antonio Spurs",
+      "Orlando Magic",
+      "31.01. 22:00"
+    ],
+    [
+      "Brooklyn Nets",
+      "Phoenix Suns",
+      "31.01. 22:30"
+    ],
+    [
+      "Portland Trail Blazers",
+      "Milwaukee Bucks",
+      "01.02. 00:00"
+    ],
+    [
+      "Boston Celtics",
+      "Los Angeles Lakers",
+      "01.02. 21:30"
+    ],
+    [
+      "New York Knicks",
+      "Indiana Pacers",
+      "01.02. 21:30"
+    ],
+    [
+      "Memphis Grizzlies",
+      "Cleveland Cavaliers",
+      "01.02. 22:00"
+    ],
+    [
+      "Utah Jazz",
+      "Philadelphia 76ers",
+      "02.02. 00:00"
+    ],
+    [
+      "Detroit Pistons",
+      "Los Angeles Clippers",
+      "02.02. 21:00"
+    ],
+    [
+      "Washington Wizards",
+      "Miami Heat",
+      "02.02. 21:00"
+    ],
+    [
+      "Atlanta Hawks",
+      "Phoenix Suns",
+      "02.02. 21:30"
+    ],
+    [
+      "Indiana Pacers",
+      "Sacramento Kings",
+      "02.02. 21:30"
+    ],
+    [
+      "Houston Rockets",
+      "Toronto Raptors",
+      "02.02. 22:00"
+    ],
+    [
+      "Memphis Grizzlies",
+      "Golden State Warriors",
+      "02.02. 22:00"
+    ],
+    [
+      "Minnesota Timberwolves",
+      "Orlando Magic",
+      "02.02. 22:00"
+    ],
+    [
+      "Oklahoma City Thunder",
+      "Charlotte Hornets",
+      "02.02. 22:00"
+    ],
+    [
+      "San Antonio Spurs",
+      "New Orleans Pelicans",
+      "02.02. 22:00"
+    ],
+    [
+      "Denver Nuggets",
+      "Portland Trail Blazers",
+      "02.02. 23:00"
+    ],
+    [
+      "Philadelphia 76ers",
+      "Brooklyn Nets",
+      "03.02. 20:00"
+    ],
+    [
+      "Atlanta Hawks",
+      "Golden State Warriors",
+      "03.02. 21:30"
+    ],
+    [
+      "Chicago Bulls",
+      "Sacramento Kings",
+      "03.02. 22:00"
+    ],
+    [
+      "Dallas Mavericks",
+      "Milwaukee Bucks",
+      "03.02. 22:30"
+    ],
+    [
+      "New York Knicks",
+      "Los Angeles Lakers",
+      "03.02. 22:30"
+    ],
+    [
+      "San Antonio Spurs",
+      "Cleveland Cavaliers",
+      "03.02. 22:30"
+    ],
+    [
+      "Detroit Pistons",
+      "Orlando Magic",
+      "04.02. 17:00"
+    ],
+    [
+      "Washington Wizards",
+      "Phoenix Suns",
+      "04.02. 17:30"
+    ],
+    [
+      "Boston Celtics",
+      "Memphis Grizzlies",
+      "04.02. 20:00"
+    ],
+    [
+      "Charlotte Hornets",
+      "Indiana Pacers",
+      "04.02. 20:00"
+    ],
+    [
+      "Miami Heat",
+      "Los Angeles Clippers",
+      "04.02. 20:00"
+    ],
+    [
+      "Minnesota Timberwolves",
+      "Houston Rockets",
+      "04.02. 21:00"
+    ],
+    [
+      "Oklahoma City Thunder",
+      "Toronto Raptors",
+      "04.02. 21:00"
+    ],
+    [
+      "Utah Jazz",
+      "Milwaukee Bucks",
+      "04.02. 22:00"
+    ],
+    [
+      "Denver Nuggets",
+      "Portland Trail Blazers",
+      "04.02. 22:30"
+    ],
+    [
+      "Charlotte Hornets",
+      "Los Angeles Lakers",
+      "05.02. 21:00"
+    ]
+  ],
+  "table_dict": {
+    "Minnesota Timberwolves": [
+      "47",
+      "5308",
+      "5050"
+    ],
+    "Denver Nuggets": [
+      "48",
+      "5522",
+      "5324"
+    ],
+    "Oklahoma City Thunder": [
+      "47",
+      "5676",
+      "5307"
+    ],
+    "Los Angeles Clippers": [
+      "45",
+      "5307",
+      "5031"
+    ],
+    "Sacramento Kings": [
+      "45",
+      "5327",
+      "5286"
+    ],
+    "Phoenix Suns": [
+      "47",
+      "5471",
+      "5369"
+    ],
+    "New Orleans Pelicans": [
+      "47",
+      "5482",
+      "5318"
+    ],
+    "Dallas Mavericks": [
+      "47",
+      "5589",
+      "5573"
+    ],
+    "Los Angeles Lakers": [
+      "48",
+      "5571",
+      "5624"
+    ],
+    "Utah Jazz": [
+      "48",
+      "5655",
+      "5754"
+    ],
+    "Houston Rockets": [
+      "46",
+      "5232",
+      "5176"
+    ],
+    "Golden State Warriors": [
+      "43",
+      "5098",
+      "5118"
+    ],
+    "Memphis Grizzlies": [
+      "47",
+      "5053",
+      "5293"
+    ],
+    "Portland Trail Blazers": [
+      "47",
+      "5089",
+      "5484"
+    ],
+    "San Antonio Spurs": [
+      "47",
+      "5305",
+      "5704"
+    ],
+    "Boston Celtics": [
+      "47",
+      "5650",
+      "5204"
+    ],
+    "Milwaukee Bucks": [
+      "47",
+      "5830",
+      "5638"
+    ],
+    "Philadelphia 76ers": [
+      "45",
+      "5362",
+      "5059"
+    ],
+    "New York Knicks": [
+      "47",
+      "5420",
+      "5143"
+    ],
+    "Cleveland Cavaliers": [
+      "44",
+      "5020",
+      "4831"
+    ],
+    "Indiana Pacers": [
+      "47",
+      "5867",
+      "5771"
+    ],
+    "Orlando Magic": [
+      "47",
+      "5251",
+      "5227"
+    ],
+    "Miami Heat": [
+      "47",
+      "5187",
+      "5250"
+    ],
+    "Chicago Bulls": [
+      "47",
+      "5214",
+      "5280"
+    ],
+    "Brooklyn Nets": [
+      "46",
+      "5246",
+      "5284"
+    ],
+    "Atlanta Hawks": [
+      "46",
+      "5530",
+      "5672"
+    ],
+    "Toronto Raptors": [
+      "46",
+      "5263",
+      "5373"
+    ],
+    "Charlotte Hornets": [
+      "45",
+      "4885",
+      "5415"
+    ],
+    "Washington Wizards": [
+      "46",
+      "5297",
+      "5703"
+    ],
+    "Detroit Pistons": [
+      "46",
+      "5172",
+      "5618"
+    ]
+  }
+}
