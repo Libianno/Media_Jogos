@@ -5,6 +5,8 @@ from prettyprinter import pprint as pp
 
 from tqdm import tqdm
 
+from links import Links
+
 
 
 def get_jogos(nav, link_fixtures):
@@ -78,8 +80,8 @@ def main():
     chrome_options.add_argument('--log-level=3')
     nav = Chrome(options=chrome_options)
     nav.implicitly_wait(10)
-    link_fixtures = 'https://www.flashscore.com/basketball/usa/nba/fixtures/'
-    link_table = 'https://www.flashscore.com/basketball/usa/nba/standings/#/CpvDJmdj/table/overall'
+    link_fixtures = Links.basquete[0]
+    link_table = Links.basquete[1]
     table = get_table(nav, link_table)
     liga, matches = get_jogos(nav, link_fixtures)
     return liga, calcula_media_jogos(nav,table, matches)
