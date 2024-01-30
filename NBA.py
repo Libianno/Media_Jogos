@@ -10,7 +10,7 @@ from tqdm import tqdm
 def get_jogos(nav, link_fixtures):
     nav.get(link_fixtures)
 
-    liga = nav.find_element(By.CLASS_NAME, 'event__title--name').text
+    liga = nav.find_element(By.CLASS_NAME, 'heading__name').text
 
     #print(liga)
 
@@ -54,9 +54,8 @@ def get_table(nav, link_table):
         #pp(table_dict)
     return table_dict
 
-def calc(nav,link_table, link_fixtures):
-    table = get_table(nav, link_table)
-    liga, matches = get_jogos(nav, link_fixtures)
+
+def calcula_media_jogos(nav, table, matches):
     #print(liga)
     for match in tqdm(matches):
         games1 = table[match[0]][0]
@@ -71,7 +70,7 @@ def calc(nav,link_table, link_fixtures):
         means_of_match = str(means_of_match)
         match.append(means_of_match[:4])
     #pp(matches)
-    return liga, matches
+    return matches
 
 def main():
     chrome_options = Options()
@@ -81,7 +80,9 @@ def main():
     nav.implicitly_wait(10)
     link_fixtures = 'https://www.flashscore.com/basketball/usa/nba/fixtures/'
     link_table = 'https://www.flashscore.com/basketball/usa/nba/standings/#/CpvDJmdj/table/overall'
-    return calc(nav,link_table, link_fixtures)
+    table = get_table(nav, link_table)
+    liga, matches = get_jogos(nav, link_fixtures)
+    return liga, calcula_media_jogos(nav,table, matches)
     
 
 

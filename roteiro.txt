@@ -1,4 +1,0 @@
-organizar nome jogos e gols por time, num dixionario
-pegar jogos e calcular media de gols daquela partida
-printar resultado
-fazer isso pra todas as ligas
