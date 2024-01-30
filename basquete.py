@@ -61,7 +61,7 @@ def create_json(liga, matches, table):
     data = {'liga': liga,
             'matches_list' : matches,
             'table_dict': table}
-    with open('dados_futebol.json', 'w') as dados_futebol:
+    with open('dados_basquete.json', 'w') as dados_futebol:
         dados_futebol.write(json.dumps(data, indent=2))
 
 def calcula_media_jogos(table, matches):
