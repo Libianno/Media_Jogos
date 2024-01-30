@@ -2,8 +2,9 @@ from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from prettyprinter import pprint as pp
-
 import tqdm as tqdm
+
+import json
 
 from links import Links
 
@@ -55,6 +56,15 @@ def calc(table, matches):
         match.append(means_of_match[:4])
     return matches
 
+def create_json(liga, rodada, matches, table):
+    data = {'liga': liga,
+            'rodada': rodada,
+            'matches_list' : matches,
+            'table_dict': table}
+    liga = liga.replace(' ', '_')
+    with open(f'dados_futebol_{liga}.json', 'w') as dados_futebol:
+        dados_futebol.write(json.dumps(data, indent=2))
+
 def main():
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -65,15 +75,13 @@ def main():
     for link in links:
         table = get_table(nav, link[1])
         liga, rodada, matches = get_jogos(nav, link[0])
-        yield liga, rodada, calc(nav, table, matches)
+        create_json(liga, rodada, matches, table)
 
 if __name__ == '__main__':
-    run = main()
-    try:
-        while 1:
-            liga, rodada, matches = next(run)
-            print(liga)
-            print(rodada)
-            pp(matches)
-    except StopIteration:
-        pass
+    main()
+    #ligas = main()
+    #for lig in ligas:       
+    #    liga, rodada, matches = lig
+    #    print(liga)
+    #    print(rodada)
+    #    pp(matches)
