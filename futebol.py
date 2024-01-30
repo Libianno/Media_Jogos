@@ -40,7 +40,7 @@ def get_table(nav, link_table):
         table_dict[name] = [games, goals_pro, goals_re]
     return table_dict
 
-def calc(nav, table, matches):
+def calc(table, matches):
     for match in tqdm.tqdm(matches):
         games1 = table[match[0]][0]
         goals_pro1 = table[match[0]][1]

@@ -57,7 +57,7 @@ def get_table(nav, link_table):
     return table_dict
 
 
-def calcula_media_jogos(nav, table, matches):
+def calcula_media_jogos(table, matches):
     #print(liga)
     for match in tqdm(matches):
         games1 = table[match[0]][0]
